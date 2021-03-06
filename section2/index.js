@@ -51,3 +51,8 @@ var cloth = {
     size: 'medium'
 };
 console.log(cloth);
+// 関数に型を付ける例
+function sum(num1, num2) {
+    return num1 + num2;
+}
+console.log(sum(1, 2));

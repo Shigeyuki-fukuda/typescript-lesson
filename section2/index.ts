@@ -78,3 +78,9 @@ const cloth: {
   size: 'medium'
 }
 console.log(cloth);
+
+// 関数に型を付ける例
+function sum(num1: number, num2: number): number {
+  return num1 + num2;
+}
+console.log(sum(1, 2));
