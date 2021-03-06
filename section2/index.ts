@@ -28,3 +28,17 @@ console.log(fruits);
 // Tuple型の例
 const book: [string, number, boolean] = ['business', 1500, false];
 console.log(book);
+
+// Enum型の例
+enum CoffeeSize {
+  SHORT = 'SHORT',
+  TALL = 'TALL',
+  GRANDE = 'GRANDE',
+  VENTI = 'VENTI'
+}
+const coffee = {
+  hot: true,
+  size: CoffeeSize.TALL
+}
+coffee.size = CoffeeSize.GRANDE;
+console.log(coffee);
