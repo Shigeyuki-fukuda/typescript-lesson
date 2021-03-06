@@ -24,3 +24,7 @@ console.log(person);
 // 配列に型を付ける例
 const fruits: string[] = ['Apple', 'Banana', 'Grape'];
 console.log(fruits);
+
+// Tuple型の例
+const book: [string, number, boolean] = ['business', 1500, false];
+console.log(book);
