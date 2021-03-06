@@ -56,3 +56,8 @@ function sum(num1, num2) {
     return num1 + num2;
 }
 console.log(sum(1, 2));
+// 関数の戻り値をvoid型にした例
+function sayHello() {
+    console.log('Hello');
+}
+sayHello();

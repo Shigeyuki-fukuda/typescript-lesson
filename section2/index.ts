@@ -84,3 +84,9 @@ function sum(num1: number, num2: number): number {
   return num1 + num2;
 }
 console.log(sum(1, 2));
+
+// 関数の戻り値をvoid型にした例
+function sayHello(): void {
+  console.log('Hello');
+}
+sayHello();
