@@ -109,3 +109,9 @@ function doubleandHandle(num: number, cb: (num: number) => number): void {
   console.log(num * 2, doubleNum);
 }
 doubleandHandle(10, doubleNumber => doubleNumber);
+
+// never型の例
+function error(message: string): never {
+  throw new Error(message);
+}
+console.log(error('This is an error!!!'));

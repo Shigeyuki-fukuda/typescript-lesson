@@ -78,3 +78,8 @@ function doubleandHandle(num, cb) {
     console.log(num * 2, doubleNum);
 }
 doubleandHandle(10, function (doubleNumber) { return doubleNumber; });
+// never型の例
+function error(message) {
+    throw new Error(message);
+}
+console.log(error('This is an error!!!'));
