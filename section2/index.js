@@ -72,3 +72,9 @@ console.log(anotherSum(2, 3));
 // const doubleNumber = (num: number): number => num * 2;
 var doubleNumber = function (num) { return num * 2; };
 console.log(doubleNumber(2));
+// callback関数に型を付ける例
+function doubleandHandle(num, cb) {
+    var doubleNum = cb(num * 2);
+    console.log(num * 2, doubleNum);
+}
+doubleandHandle(10, function (doubleNumber) { return doubleNumber; });
