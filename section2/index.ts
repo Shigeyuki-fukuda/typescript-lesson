@@ -90,3 +90,15 @@ function sayHello(): void {
   console.log('Hello');
 }
 sayHello();
+
+// 関数を保持する変数に型を付ける例
+const anotherSum: (num1: number, num2: number) => number = sum;
+// 無名関数の場合
+// const anotherSum: (num1: number, num2: number) => number = function (num1, num2) {
+//   return num1 + num2;
+// }
+console.log(anotherSum(2, 3));
+// アロー関数の場合
+// const doubleNumber = (num: number): number => num * 2;
+const doubleNumber: (num: number) => number = num => num * 2;
+console.log(doubleNumber(2));
