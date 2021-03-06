@@ -20,3 +20,7 @@ const person: {
 //   age: 21
 // }
 console.log(person);
+
+// 配列に型を付ける例
+const fruits: string[] = ['Apple', 'Banana', 'Grape'];
+console.log(fruits);
