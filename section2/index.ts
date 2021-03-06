@@ -54,11 +54,25 @@ const apple: 'apple' = 'apple';
 console.log(apple);
 
 // Literal型 を Union型と組み合わせて使う例
-const clothSize: 'small' | 'medium' | 'large' = 'small';
+// const clothSize: 'small' | 'medium' | 'large' = 'small';
+// console.log(clothSize);
+// const cloth: {
+//   color: string;
+//   size: 'small' | 'medium' | 'large'
+// } = {
+//   color: 'white',
+//   size: 'medium'
+// }
+// console.log(cloth);
+
+// typeエイリアスの例
+type ClothSize = 'small' | 'medium' | 'large';
+let clothSize: ClothSize = 'small';
 console.log(clothSize);
+
 const cloth: {
   color: string;
-  size: 'small' | 'medium' | 'large'
+  size: ClothSize
 } = {
   color: 'white',
   size: 'medium'
