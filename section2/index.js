@@ -41,3 +41,14 @@ var unionType = 10;
 console.log(unionType);
 var unionTypes = [1, 2, '3'];
 console.log(unionTypes);
+// Literal型(特定の決まった値のみを扱う型)の例
+var apple = 'apple';
+console.log(apple);
+// Literal型 を Union型と組み合わせて使う例
+var clothSize = 'small';
+console.log(clothSize);
+var cloth = {
+    color: 'white',
+    size: 'medium'
+};
+console.log(cloth);

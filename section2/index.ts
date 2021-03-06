@@ -46,5 +46,21 @@ console.log(coffee);
 // Union型の例
 let unionType: number | string = 10;
 console.log(unionType);
-let unionTypes: (number | string)[] = [1,2,'3']
+let unionTypes: (number | string)[] = [1,2,'3'];
 console.log(unionTypes);
+
+// Literal型(特定の決まった値のみを扱う型)の例
+const apple: 'apple' = 'apple';
+console.log(apple);
+
+// Literal型 を Union型と組み合わせて使う例
+const clothSize: 'small' | 'medium' | 'large' = 'small';
+console.log(clothSize);
+const cloth: {
+  color: string;
+  size: 'small' | 'medium' | 'large'
+} = {
+  color: 'white',
+  size: 'medium'
+}
+console.log(cloth);
