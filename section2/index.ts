@@ -42,3 +42,9 @@ const coffee = {
 }
 coffee.size = CoffeeSize.GRANDE;
 console.log(coffee);
+
+// Union型の例
+let unionType: number | string = 10;
+console.log(unionType);
+let unionTypes: (number | string)[] = [1,2,'3']
+console.log(unionTypes);

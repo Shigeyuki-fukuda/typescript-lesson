@@ -36,3 +36,8 @@ var coffee = {
 };
 coffee.size = CoffeeSize.GRANDE;
 console.log(coffee);
+// Union型の例
+var unionType = 10;
+console.log(unionType);
+var unionTypes = [1, 2, '3'];
+console.log(unionTypes);
