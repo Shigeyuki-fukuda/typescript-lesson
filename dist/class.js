@@ -1,9 +1,9 @@
 "use strict";
 // ES5以前にクラスを作る方法としてあったコンストラクタ関数のES6以降版のシンタックスシュガー
 var Person = /** @class */ (function () {
-    function Person(initName, initAge) {
-        this.name = initName;
-        this.age = initAge;
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
     }
     Person.prototype.increment_age = function () {
         this.age += 1;
