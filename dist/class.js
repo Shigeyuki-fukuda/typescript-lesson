@@ -10,5 +10,9 @@ var Person = /** @class */ (function () {
     return Person;
 }());
 var john = new Person('John');
-console.log(john);
 john.greet();
+var paul = {
+    name: 'paul',
+    greet: john.greet
+};
+paul.greet();

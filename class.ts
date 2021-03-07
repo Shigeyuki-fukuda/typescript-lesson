@@ -6,10 +6,16 @@ class Person {
     this.name = initName;
   }
 
-  greet() {
+  greet(this: Person) {
     console.log(`Hello! My name is ${this.name}!!`);
   }
 }
-const john = new Person('John');
-console.log(john);
+
+const john: Person = new Person('John');
 john.greet();
+
+const paul = {
+  name: 'paul',
+  greet: john.greet
+}
+paul.greet();
