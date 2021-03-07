@@ -30,10 +30,21 @@ var Person = /** @class */ (function () {
 }());
 var Teacher = /** @class */ (function (_super) {
     __extends(Teacher, _super);
-    function Teacher() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function Teacher(name, age, subject) {
+        var _this = _super.call(this, name, age) || this;
+        _this.subject = subject;
+        return _this;
     }
+    Teacher.getInstance = function () {
+        if (Teacher.instance)
+            return Teacher.instance;
+        Teacher.instance = new Teacher('George', 58, 'Music');
+        return Teacher.instance;
+    };
+    Teacher.prototype.greet = function () {
+        console.log("Hello! My name is " + this.name + "!! I am " + this.age + " years old!!! I teach " + this.subject + "!!!!");
+    };
     return Teacher;
 }(Person));
-var teacher = new Teacher('George', 58);
+var teacher = Teacher.getInstance();
 teacher.greet();

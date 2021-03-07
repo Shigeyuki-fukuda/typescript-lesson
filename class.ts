@@ -10,12 +10,18 @@ class Person {
 }
 
 class Teacher extends Person {
-  constructor(name: string, age: number, public subject: string) {
+  private static instance: Teacher;
+  private constructor(name: string, age: number, public subject: string) {
     super(name, age);
+  }
+  static getInstance() {
+    if (Teacher.instance) return Teacher.instance;
+    Teacher.instance = new Teacher('George', 58, 'Music');
+    return Teacher.instance;
   }
   greet() {
     console.log(`Hello! My name is ${this.name}!! I am ${this.age} years old!!! I teach ${this.subject}!!!!`);
   }
 }
-const teacher = new Teacher('George', 58, 'Music');
+const teacher = Teacher.getInstance();
 teacher.greet();
