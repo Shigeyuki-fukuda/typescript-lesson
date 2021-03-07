@@ -1,6 +1,6 @@
 // ES5以前にクラスを作る方法としてあったコンストラクタ関数のES6以降版のシンタックスシュガー
 class Person {
-  constructor(public name: string, private age: number) {}
+  constructor(public name: string, protected age: number) {}
   increment_age() {
     this.age += 1;
   }
@@ -9,6 +9,13 @@ class Person {
   }
 }
 
-const john: Person = new Person('John', 40);
-john.increment_age();
-john.greet();
+class Teacher extends Person {
+  constructor(name: string, age: number, public subject: string) {
+    super(name, age);
+  }
+  greet() {
+    console.log(`Hello! My name is ${this.name}!! I am ${this.age} years old!!! I teach ${this.subject}!!!!`);
+  }
+}
+const teacher = new Teacher('George', 58, 'Music');
+teacher.greet();
