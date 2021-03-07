@@ -9,3 +9,8 @@ var Developer = /** @class */ (function () {
     };
     return Developer;
 }());
+var addFunc;
+addFunc = function (num1, num2) {
+    return num1 + num2;
+};
+console.log(addFunc(1, 2));
