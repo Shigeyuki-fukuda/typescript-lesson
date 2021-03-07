@@ -4,7 +4,11 @@ var Person = /** @class */ (function () {
     function Person(initName) {
         this.name = initName;
     }
+    Person.prototype.greet = function () {
+        console.log("Hello! My name is " + this.name + "!!");
+    };
     return Person;
 }());
 var john = new Person('John');
 console.log(john);
+john.greet();
