@@ -3,11 +3,9 @@ interface Human {
   age: number,
   greet(message: string): void;
 }
-const human: Human = {
-  name: "Paul",
-  age: 78,
-  greet(message: string): void {
+class Developer implements Human {
+  constructor(public name: string, public age: number) {}
+  greet(message: string) {
     console.log(message);
   }
 }
-human.greet('Yeah!!!');

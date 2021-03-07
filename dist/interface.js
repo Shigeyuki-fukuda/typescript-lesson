@@ -1,9 +1,11 @@
 "use strict";
-var human = {
-    name: "Paul",
-    age: 78,
-    greet: function (message) {
-        console.log(message);
+var Developer = /** @class */ (function () {
+    function Developer(name, age) {
+        this.name = name;
+        this.age = age;
     }
-};
-console.log(human);
+    Developer.prototype.greet = function (message) {
+        console.log(message);
+    };
+    return Developer;
+}());
