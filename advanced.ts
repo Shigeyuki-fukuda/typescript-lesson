@@ -45,11 +45,13 @@ function describeProfile(nomadWorker: NomadWorker) {
 
 // Type guardの例3
 class Dog {
+  kind: 'dog' = 'dog'; // タグ
   speak() {
     console.log('bow-wow!!!');
   }
 }
 class Bird {
+  kind: 'bird' = 'bird'; // タグ
   speak() {
     console.log('tweet-tweet');
   }
@@ -60,6 +62,10 @@ class Bird {
 type Pet = Dog | Bird;
 function havePet(pet: Pet) {
   pet.speak();
+  switch (pet.kind) {
+    case 'bird':
+      pet.fly();
+  }
   if (pet instanceof Bird) {
     pet.fly();
   }

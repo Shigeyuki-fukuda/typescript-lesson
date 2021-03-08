@@ -25,6 +25,7 @@ function describeProfile(nomadWorker) {
 // Type guardの例3
 var Dog = /** @class */ (function () {
     function Dog() {
+        this.kind = 'dog'; // タグ
     }
     Dog.prototype.speak = function () {
         console.log('bow-wow!!!');
@@ -33,6 +34,7 @@ var Dog = /** @class */ (function () {
 }());
 var Bird = /** @class */ (function () {
     function Bird() {
+        this.kind = 'bird'; // タグ
     }
     Bird.prototype.speak = function () {
         console.log('tweet-tweet');
@@ -44,6 +46,10 @@ var Bird = /** @class */ (function () {
 }());
 function havePet(pet) {
     pet.speak();
+    switch (pet.kind) {
+        case 'bird':
+            pet.fly();
+    }
     if (pet instanceof Bird) {
         pet.fly();
     }
