@@ -1,13 +1,15 @@
-type Engineer = {
+interface Engineer {
   name: string;
   role: string;
 }
-type Blogger = {
+interface Blogger {
   name: string;
   follower: number;
 }
 // &を用いたインターセクション型の例
-type EngineerBlogger = Engineer & Blogger;
+// type EngineerBlogger = Engineer & Blogger;
+interface EngineerBlogger extends Engineer, Blogger {} // 末尾に空のオブジェクトが必要なので {} も書いている
+
 const quil: EngineerBlogger = {
   name: 'Quil',
   role: 'front-end-engineer',
