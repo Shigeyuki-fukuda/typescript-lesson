@@ -78,4 +78,9 @@ havePet(new Bird());
 // その2： 変数 as 型名
 // const input = document.getElementById('input') as HTMLInputElement;
 // input.value = 'initial input value';
-(document.getElementById('input') as HTMLInputElement).value = 'initial input value';
+// (document.getElementById('input') as HTMLInputElement).value = 'initial input value';
+
+// Non-null assertion operatorの例 ： 変数! と末尾に!を付けることで nullではないと実装者が明示出来る
+const a: string | null = null;
+const x: string = a!;
+console.log(x);

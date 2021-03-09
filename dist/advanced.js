@@ -55,3 +55,14 @@ function havePet(pet) {
     }
 }
 havePet(new Bird());
+// 型アサーションの例 : JSXを使う場合はその2が推奨
+// その1： <型名>
+// const input = <HTMLInputElement>document.getElementById('input');
+// その2： 変数 as 型名
+// const input = document.getElementById('input') as HTMLInputElement;
+// input.value = 'initial input value';
+// (document.getElementById('input') as HTMLInputElement).value = 'initial input value';
+// Non-null assertion operatorの例 ： 変数! と末尾に!を付けることで nullではないと実装者が明示出来る
+var a = null;
+var x = a;
+console.log(x);
