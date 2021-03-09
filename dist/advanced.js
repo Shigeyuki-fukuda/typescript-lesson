@@ -84,4 +84,4 @@ function advancedFunc() {
     }
     console.log(args);
 }
-advancedFunc(1, '2');
+advancedFunc(1, '2', 3, 4, 5);

@@ -103,7 +103,7 @@ console.log(designer);
 
 // レストパラメータを使ってTupleを指定する例
 // Tupleでも引数の末尾に?を付けるとオプショナルな引数になる
-function advancedFunc(...args: [number, string, boolean?]) {
+function advancedFunc(...args: [number, string, ...number[]]) {
   console.log(args);
 }
-advancedFunc(1,'2');
+advancedFunc(1,'2', 3, 4, 5);
