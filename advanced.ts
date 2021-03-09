@@ -107,3 +107,10 @@ function advancedFunc(...args: [number, string, ...number[]]) {
   console.log(args);
 }
 advancedFunc(1,'2', 3, 4, 5);
+
+// constアサーションの例
+const array = [10, 20] as const; // arrayが readonly の[10, 20]となり定数のように扱うことが出来る
+const peter = {
+  name: 'Peter',
+  age: 38
+} as const;

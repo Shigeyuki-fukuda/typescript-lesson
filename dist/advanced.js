@@ -85,3 +85,9 @@ function advancedFunc() {
     console.log(args);
 }
 advancedFunc(1, '2', 3, 4, 5);
+// constアサーションの例
+var array = [10, 20]; // arrayが readonly の[10, 20]となり定数のように扱うことが出来る
+var peter = {
+    name: 'Peter',
+    age: 38
+};
