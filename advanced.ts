@@ -114,3 +114,6 @@ const peter = {
   name: 'Peter',
   age: 38
 } as const;
+
+// 型の中で typeof を使った例
+type PeterType = typeof peter; // peterという値に typeof を使うことでpeterという値の型を抽出することが出来る
