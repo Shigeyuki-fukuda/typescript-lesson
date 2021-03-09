@@ -71,3 +71,11 @@ function havePet(pet: Pet) {
   }
 }
 havePet(new Bird());
+
+// 型アサーションの例 : JSXを使う場合はその2が推奨
+// その1： <型名>
+// const input = <HTMLInputElement>document.getElementById('input');
+// その2： 変数 as 型名
+// const input = document.getElementById('input') as HTMLInputElement;
+// input.value = 'initial input value';
+(document.getElementById('input') as HTMLInputElement).value = 'initial input value';
