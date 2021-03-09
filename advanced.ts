@@ -84,3 +84,14 @@ havePet(new Bird());
 const a: string | null = null;
 const x: string = a!;
 console.log(x);
+
+// インデックスシグネチャの例
+interface Designer {
+  name: string;
+  [index: string]: string;
+}
+const designer: Designer = {
+  name: 'Quill',
+  role: 'leader'
+}
+console.log(designer);

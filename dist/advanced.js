@@ -66,3 +66,8 @@ havePet(new Bird());
 var a = null;
 var x = a;
 console.log(x);
+var designer = {
+    name: 'Quill',
+    role: 'leader'
+};
+console.log(designer);
