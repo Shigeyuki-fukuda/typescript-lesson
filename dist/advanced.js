@@ -71,3 +71,17 @@ var designer = {
     role: 'leader'
 };
 console.log(designer);
+// レストパラメータを使って配列を指定する例
+// function advancedFunc(...args: number[]) {
+//   console.log(args);
+// }
+// レストパラメータを使ってTupleを指定する例
+// Tupleでも引数の末尾に?を付けるとオプショナルな引数になる
+function advancedFunc() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+    console.log(args);
+}
+advancedFunc(1, '2');

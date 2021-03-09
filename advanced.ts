@@ -95,3 +95,15 @@ const designer: Designer = {
   role: 'leader'
 }
 console.log(designer);
+
+// レストパラメータを使って配列を指定する例
+// function advancedFunc(...args: number[]) {
+//   console.log(args);
+// }
+
+// レストパラメータを使ってTupleを指定する例
+// Tupleでも引数の末尾に?を付けるとオプショナルな引数になる
+function advancedFunc(...args: [number, string, boolean?]) {
+  console.log(args);
+}
+advancedFunc(1,'2');
