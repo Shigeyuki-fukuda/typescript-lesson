@@ -6,3 +6,29 @@ function copy(value, key) {
     return value;
 }
 console.log(copy({ name: 'John', age: 38 }, 'age'));
+// クラスに対してジェネリクスを使用する例
+var LightDatabase = /** @class */ (function () {
+    function LightDatabase() {
+        this.data = [];
+    }
+    LightDatabase.prototype.add = function (item) {
+        this.data.push(item);
+    };
+    ;
+    LightDatabase.prototype.remove = function (item) {
+        this.data.splice(this.data.indexOf(item), 1);
+    };
+    ;
+    LightDatabase.prototype.get = function () {
+        return this.data;
+    };
+    ;
+    return LightDatabase;
+}());
+var stringLightDatabase = new LightDatabase();
+stringLightDatabase.add('apple');
+stringLightDatabase.add('banana');
+console.log(stringLightDatabase.get());
+var numberLightDatabase = new LightDatabase();
+numberLightDatabase.add(99);
+console.log(numberLightDatabase.get());
