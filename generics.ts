@@ -47,3 +47,22 @@ const typeDatabase: TypeDatabase<string> = {
   id: 2,
   data: ['type']
 }
+
+// TypeScriptに内蔵されているUtility型の例
+interface Todo {
+  title: string;
+  text: string;
+}
+type TodoList = Partial<Todo>;
+type ReadTodo = Readonly<Todo>;
+
+const fetchData: Promise<string> = new Promise(resolve => {
+  setTimeout(() => {
+    resolve('success');
+  }, 3000);
+});
+fetchData.then(data => {
+  data.toUpperCase();
+});
+
+const vegetables: Array<string> = ['Tomato', 'Broccoli', 'Asparagus'];

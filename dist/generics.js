@@ -7,36 +7,44 @@ function copy(value, key) {
 }
 console.log(copy({ name: 'John', age: 38 }, 'age'));
 // クラスに対してジェネリクスを使用する例
-var LightDatabase = /** @class */ (function () {
-    function LightDatabase() {
+class LightDatabase {
+    constructor() {
         this.data = [];
     }
-    LightDatabase.prototype.add = function (item) {
+    add(item) {
         this.data.push(item);
-    };
+    }
     ;
-    LightDatabase.prototype.remove = function (item) {
+    remove(item) {
         this.data.splice(this.data.indexOf(item), 1);
-    };
+    }
     ;
-    LightDatabase.prototype.get = function () {
+    get() {
         return this.data;
-    };
+    }
     ;
-    return LightDatabase;
-}());
-var stringLightDatabase = new LightDatabase();
+}
+const stringLightDatabase = new LightDatabase();
 stringLightDatabase.add('apple');
 stringLightDatabase.add('banana');
 console.log(stringLightDatabase.get());
-var numberLightDatabase = new LightDatabase();
+const numberLightDatabase = new LightDatabase();
 numberLightDatabase.add(99);
 console.log(numberLightDatabase.get());
-var tmpDatabase = {
+const tmpDatabase = {
     id: 1,
     data: [12]
 };
-var typeDatabase = {
+const typeDatabase = {
     id: 2,
     data: ['type']
 };
+const fetchData = new Promise(resolve => {
+    setTimeout(() => {
+        resolve('success');
+    }, 3000);
+});
+fetchData.then(data => {
+    data.toUpperCase();
+});
+const vegetables = ['Tomato', 'Broccoli', 'Asparagus'];
