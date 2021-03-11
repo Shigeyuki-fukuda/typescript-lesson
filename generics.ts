@@ -73,3 +73,13 @@ interface ResponseData<T extends { message: string } = any> {
   status: number;
 }
 let tmp: ResponseData;
+
+// 型のfor文であるMapped Typesの例
+interface Vegetables {
+  tomato: string;
+  broccoli: string;
+  asparagus?: string;
+}
+type MappedTypes = {
+  [P in keyof Vegetables]-?: string
+}
