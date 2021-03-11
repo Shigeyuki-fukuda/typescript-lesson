@@ -83,3 +83,11 @@ interface Vegetables {
 type MappedTypes = {
   [P in keyof Vegetables]-?: string
 }
+
+// 型のif文であるConditional Typesの例
+// extendsの左辺の'tomato'をstringに代入出来る場合はstring、そうでなければbooleanをConditionalTypesに設定する
+type ConditionalTypes = 'tomato' extends string ? string : boolean;
+type ConditionalTypesInfer = { tomato: 'tomato' } extends { tomato: infer R } ? R : boolean;
+type DistributiveConditionalTypes<T> = T extends 'tomato' ? number : boolean;
+let tmp2: DistributiveConditionalTypes<'tomato' | 'pumpkin'>;
+let tmp3: NonNullable<string | null>;
