@@ -1,5 +1,5 @@
 "use strict";
-var quil = {
+const quil = {
     name: 'Quil',
     role: 'front-end-engineer',
     follower: 1000
@@ -23,27 +23,25 @@ function describeProfile(nomadWorker) {
     }
 }
 // Type guardの例3
-var Dog = /** @class */ (function () {
-    function Dog() {
+class Dog {
+    constructor() {
         this.kind = 'dog'; // タグ
     }
-    Dog.prototype.speak = function () {
+    speak() {
         console.log('bow-wow!!!');
-    };
-    return Dog;
-}());
-var Bird = /** @class */ (function () {
-    function Bird() {
+    }
+}
+class Bird {
+    constructor() {
         this.kind = 'bird'; // タグ
     }
-    Bird.prototype.speak = function () {
+    speak() {
         console.log('tweet-tweet');
-    };
-    Bird.prototype.fly = function () {
+    }
+    fly() {
         console.log('flutter');
-    };
-    return Bird;
-}());
+    }
+}
 function havePet(pet) {
     pet.speak();
     switch (pet.kind) {
@@ -63,10 +61,10 @@ havePet(new Bird());
 // input.value = 'initial input value';
 // (document.getElementById('input') as HTMLInputElement).value = 'initial input value';
 // Non-null assertion operatorの例 ： 変数! と末尾に!を付けることで nullではないと実装者が明示出来る
-var a = null;
-var x = a;
+const a = null;
+const x = a;
 console.log(x);
-var designer = {
+const designer = {
     name: 'Quill',
     role: 'leader'
 };
@@ -77,17 +75,13 @@ console.log(designer);
 // }
 // レストパラメータを使ってTupleを指定する例
 // Tupleでも引数の末尾に?を付けるとオプショナルな引数になる
-function advancedFunc() {
-    var args = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        args[_i] = arguments[_i];
-    }
+function advancedFunc(...args) {
     console.log(args);
 }
 advancedFunc(1, '2', 3, 4, 5);
 // constアサーションの例
-var array = [10, 20]; // arrayが readonly の[10, 20]となり定数のように扱うことが出来る
-var peter = {
+const array = [10, 20]; // arrayが readonly の[10, 20]となり定数のように扱うことが出来る
+const peter = {
     name: 'Peter',
     age: 38
 };

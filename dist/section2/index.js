@@ -1,13 +1,13 @@
 "use strict";
-var hasValue = true;
-var count = 12;
-var float = 3.14;
-var negative = -1;
-var single = 'hello';
-var double = "hello";
-var back = "hello";
+let hasValue = true;
+let count = 12;
+let float = 3.14;
+let negative = -1;
+let single = 'hello';
+let double = "hello";
+let back = `hello`;
 // objectに型を付ける例
-var person = {
+const person = {
     name: 'Jack',
     age: 21
 };
@@ -18,10 +18,10 @@ var person = {
 // }
 console.log(person);
 // 配列に型を付ける例
-var fruits = ['Apple', 'Banana', 'Grape'];
+const fruits = ['Apple', 'Banana', 'Grape'];
 console.log(fruits);
 // Tuple型の例
-var book = ['business', 1500, false];
+const book = ['business', 1500, false];
 console.log(book);
 // Enum型の例
 var CoffeeSize;
@@ -31,23 +31,23 @@ var CoffeeSize;
     CoffeeSize["GRANDE"] = "GRANDE";
     CoffeeSize["VENTI"] = "VENTI";
 })(CoffeeSize || (CoffeeSize = {}));
-var coffee = {
+const coffee = {
     hot: true,
     size: CoffeeSize.TALL
 };
 coffee.size = CoffeeSize.GRANDE;
 console.log(coffee);
 // Union型の例
-var unionType = 10;
+let unionType = 10;
 console.log(unionType);
-var unionTypes = [1, 2, '3'];
+let unionTypes = [1, 2, '3'];
 console.log(unionTypes);
 // Literal型(特定の決まった値のみを扱う型)の例
-var apple = 'apple';
+const apple = 'apple';
 console.log(apple);
-var clothSize = 'small';
+let clothSize = 'small';
 console.log(clothSize);
-var cloth = {
+const cloth = {
     color: 'white',
     size: 'medium'
 };
@@ -63,7 +63,7 @@ function sayHello() {
 }
 sayHello();
 // 関数を保持する変数に型を付ける例
-var anotherSum = sum;
+const anotherSum = sum;
 // 無名関数の場合
 // const anotherSum: (num1: number, num2: number) => number = function (num1, num2) {
 //   return num1 + num2;
@@ -71,14 +71,14 @@ var anotherSum = sum;
 console.log(anotherSum(2, 3));
 // アロー関数の場合
 // const doubleNumber = (num: number): number => num * 2;
-var doubleNumber = function (num) { return num * 2; };
+const doubleNumber = num => num * 2;
 console.log(doubleNumber(2));
 // callback関数に型を付ける例
 function doubleandHandle(num, cb) {
-    var doubleNum = cb(num * 2);
+    const doubleNum = cb(num * 2);
     console.log(num * 2, doubleNum);
 }
-doubleandHandle(10, function (doubleNumber) { return doubleNumber; });
+doubleandHandle(10, doubleNumber => doubleNumber);
 // never型の例
 function error(message) {
     throw new Error(message);

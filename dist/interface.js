@@ -1,16 +1,15 @@
 "use strict";
-var Developer = /** @class */ (function () {
-    function Developer(name, age) {
+class Developer {
+    constructor(name, age) {
         this.name = name;
         this.age = age;
     }
-    Developer.prototype.greet = function (message) {
+    greet(message) {
         console.log(message);
-    };
-    return Developer;
-}());
-var addFunc;
-addFunc = function (num1, num2) {
+    }
+}
+let addFunc;
+addFunc = (num1, num2) => {
     return num1 + num2;
 };
 console.log(addFunc(1, 2));
