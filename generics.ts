@@ -66,3 +66,10 @@ fetchData.then(data => {
 });
 
 const vegetables: Array<string> = ['Tomato', 'Broccoli', 'Asparagus'];
+
+// 型のパラメータにデフォルトの値を指定する例
+interface ResponseData<T extends { message: string } = any> {
+  data: T;
+  status: number;
+}
+let tmp: ResponseData;
