@@ -32,3 +32,11 @@ console.log(stringLightDatabase.get());
 var numberLightDatabase = new LightDatabase();
 numberLightDatabase.add(99);
 console.log(numberLightDatabase.get());
+var tmpDatabase = {
+    id: 1,
+    data: [12]
+};
+var typeDatabase = {
+    id: 2,
+    data: ['type']
+};

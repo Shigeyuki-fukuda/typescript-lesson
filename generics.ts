@@ -27,3 +27,23 @@ console.log(stringLightDatabase.get());
 const numberLightDatabase = new LightDatabase<number>();
 numberLightDatabase.add(99);
 console.log(numberLightDatabase.get());
+
+// interfaceにジェネリクスを使用する例
+interface TmpDatabase<T> {
+  id: number;
+  data: T[];
+}
+const tmpDatabase: TmpDatabase<number> = {
+  id: 1,
+  data: [12]
+}
+
+// typeエイリアスでジェネリクスを使用する例
+type TypeDatabase<T> = {
+  id: number;
+  data: T[];
+}
+const typeDatabase: TypeDatabase<string> = {
+  id: 2,
+  data: ['type']
+}
