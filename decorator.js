@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -15,24 +14,25 @@ function Logging(message) {
 // デコレータを使って簡易版フレームワークを作る例
 function Component(template, selector) {
     return function (constructor) {
-        const mountedElement = document.querySelector(selector);
-        const instance = new constructor();
+        var mountedElement = document.querySelector(selector);
+        var instance = new constructor();
         if (mountedElement) {
             mountedElement.innerHTML = template;
             mountedElement.querySelector('h1').textContent = instance.name;
         }
     };
 }
-let User = class User {
-    constructor() {
+var User = /** @class */ (function () {
+    function User() {
         this.name = 'Quill';
         console.log('User was created!!!');
     }
-};
-User = __decorate([
-    Component('<h1>{{ name }}</h1>', '#app'),
-    Logging('Logging User')
-], User);
-const user1 = new User();
-const user2 = new User();
-const user3 = new User();
+    User = __decorate([
+        Component('<h1>{{ name }}</h1>', '#app'),
+        Logging('Logging User')
+    ], User);
+    return User;
+}());
+var user1 = new User();
+var user2 = new User();
+var user3 = new User();
