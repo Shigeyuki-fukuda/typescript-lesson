@@ -1,8 +1,11 @@
-function Logging(constructor: Function) {
-  console.log('Logging...');
-  console.log(constructor);
+// デコレータファクトリを利用してデコレータに引数を渡す例
+function Logging(message: string) {
+  return function(constructor: Function) {
+    console.log(message);
+    console.log(constructor);
+  }
 }
-@Logging
+@Logging('Logging User')
 class User {
   name = 'Quill';
   constructor () {
